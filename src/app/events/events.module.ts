@@ -10,6 +10,9 @@ import { EventDetailsComponent } from './event-details/event-details.component';
   ],
   imports: [
     CommonModule
+  ],
+  exports: [
+    EventDetailsComponent
   ]
 })
 export class EventsModule { }
