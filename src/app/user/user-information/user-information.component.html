@@ -1,7 +1,7 @@
 <h1>Welcome to UpMeet{{firstName}}!</h1>
 <hr />
 <br>
-<h2>Please introduce yourself!</h2>
+<header>Please introduce yourself!</header>
 
 <br>
 <div>
@@ -9,16 +9,15 @@
         <label for="firstName">First Name:&nbsp;</label>
         <input name="firstName" id="firstName" ngModel />
         
-            &nbsp;<button>Submit</button>
-        
-    </form>
-</div>
-<br>
-<div>
-    <form #lastNameForm="ngForm" (ngSubmit)="getUserLastName(lastNameForm)">
+         
+        &nbsp;
+  
         <label for ="lastName">Last Name:&nbsp;</label>
         <input name="lastName" id="lastName" ngModel />
 
        &nbsp; <button>Submit</button>
     </form>
+</div> 
+<div *ngIf="userList.id === 17">
+<h2>{{userList.name}}</h2>
 </div>
