@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { RepositoryService } from 'src/app/repository.service';
 
 @Component({
   selector: 'app-event-details',
@@ -7,9 +8,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class EventDetailsComponent implements OnInit {
 
-  constructor() { }
+  eventList: any;
+
+  constructor(private repo: RepositoryService) { }
 
   ngOnInit(): void {
+    this.repo.getEvents().subscribe(
+      (response) => {this.eventList = response}
+    )
   }
 
 }

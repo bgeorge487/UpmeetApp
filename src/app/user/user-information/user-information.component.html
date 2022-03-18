@@ -1,8 +1,18 @@
 <h1>Welcome to UpMeet{{firstName}}!</h1>
 <hr />
 <br>
-<header>Please introduce yourself!</header>
 
+
+<div *ngFor="let user of userList.results">
+    <div *ngIf="user.lastName !== undefined">
+        <h2>{{user.userName}}</h2>
+    </div>
+
+</div>
+
+
+
+<!--
 <br>
 <div>
     <form #firstNameForm="ngForm" (ngSubmit)="getUserFirstName(firstNameForm)">
@@ -21,3 +31,4 @@
 <div *ngIf="userList.id === 17">
 <h2>{{userList.name}}</h2>
 </div>
+-->

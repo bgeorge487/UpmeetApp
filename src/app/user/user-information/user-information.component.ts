@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { RepositoryService } from 'src/app/repository.service';
 import { NgForm } from '@angular/forms';
-import { IUser } from 'src/app/interfaces/user-interface';
+
 
 @Component({
   selector: 'app-user-information',
@@ -11,17 +11,20 @@ import { IUser } from 'src/app/interfaces/user-interface';
 export class UserInformationComponent implements OnInit {
 
 
-  userList: any;
+  
   firstName:string = "";
   lastName:string = "";
   fullName:string = this.firstName + this.lastName;
+  userList: any;
+
+  
   
   constructor(private repo: RepositoryService) { }
 
   ngOnInit(): void {
-    this.repo.getUser().subscribe(
+    this.repo.getUsers().subscribe(
       (response) => {this.userList = response}
-    )    
+    )       
   }
 
   getUserFirstName(form: NgForm){

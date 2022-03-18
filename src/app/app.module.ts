@@ -7,7 +7,7 @@ import { AppComponent } from './app.component';
 import { EventsModule } from './events/events.module';
 import { FavoriteModule } from './favorite/favorite.module';
 import { UserModule } from './user/user.module';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -20,7 +20,8 @@ import { FormsModule } from '@angular/forms';
     UserModule,
     FavoriteModule,
     EventsModule,
-    FormsModule
+    FormsModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
